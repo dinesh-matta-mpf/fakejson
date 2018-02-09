@@ -1,79 +1,11 @@
 {
-  "jsonschema": [
+  "posts": [
     {
-      title: 'Location',
-      type: 'object',
-      properties: {
-        location: {
-          type: 'string',
-          title: 'Where do you live?',
-          enum: ['us', 'nordic', 'other'],
-          enumNames: ['US', 'Nordic country', 'Other']
-        },
-        state: {
-          type: 'string',
-          title: 'State',
-          enum: ['AL', 'AK', 'AZ'],
-          enumNames: ['Alabama', 'Alaska', 'Arizona']
-        },
-        nordicCountry: {
-          type: 'string',
-          title: 'Country',
-          enum: ['de', 'fi', 'is', 'no', 'sv'],
-          enumNames: ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-        },
-        region: {
-          type: 'string',
-          title: 'Region'
-        },
-        country: {
-          type: 'string',
-          title: 'Country'
-        },
-        city: {
-          type: 'string',
-          title: 'City'
-        }
-      }
+      "id": 1,
+      "title": "hello"
     }
   ],
-  "uischema": {
-  'ui:order': ['location', 'state', 'nordicCountry', 'country', 'region', 'city'],
-  location: {
-    'ui:widget': 'radio',
-    'ui:options': {
-    	inline: true
-    },
-    classNames: 'col-xs-12'
-  },
-  state: {
-  	// Show state options only if "US" was selected
-    condition: 'location=us',
-    classNames: 'col-xs-6'
-  },
-  nordicCountry: {
-    // Show list of Nordic countries if "Nordic country" was selected
-    condition: 'location=nordic',
-    'ui:widget': 'radio',
-    classNames: 'col-xs-6'
-  },
-  country: {
-    // Show regular text field for other countries
-    condition: 'location=other',
-    classNames: 'col-xs-6'
-  },
-  city: {
-    // Show city field for all countries but only if a location selection
-    // has been made, i.e. not initially. (It would be nice to be able to
-    // location!="" or something).
-    condition: 'location=us,nordic,other',
-    classNames: 'col-xs-6'
-  },
-  region: {
-    // Show region field for all non-US countries, expect Iceland
-    // if it was selected from the Nordic country list.
-    condition: 'location=other||nordicCountry=fi,de,no,sv',
-    classNames: 'col-xs-6'
-  },
-}
+  "profile": {
+    "name": "typicode"
+  }
 }

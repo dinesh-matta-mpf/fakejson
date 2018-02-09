@@ -1,11 +1,38 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "hello"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+	"jsonschema": {
+		"title": "Location",
+		"type": "object",
+		"properties": {
+			"location": {
+				"type": "string",
+				"title": "Where do you live?",
+				"enum": ["us", "nordic", "other"],
+				"enumNames": ["US", "Nordic country", "Other"]
+			},
+			"state": {
+				"type": "string",
+				"title": "State",
+				"enum": ["AL", "AK", "AZ"],
+				"enumNames": ["Alabama", "Alaska", "Arizona"]
+			},
+			"nordicCountry": {
+				"type": "string",
+				"title": "Country",
+				"enum": ["de", "fi", "is", "no", "sv"],
+				"enumNames": ["Denmark", "Finland", "Iceland", "Norway", "Sweden"]
+			},
+			"region": {
+				"type": "string",
+				"title": "Region"
+			},
+			"country": {
+				"type": "string",
+				"title": "Country"
+			},
+			"city": {
+				"type": "string",
+				"title": "City"
+			}
+		}
+	}
 }

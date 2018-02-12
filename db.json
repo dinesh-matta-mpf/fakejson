@@ -34,5 +34,36 @@
 				"title": "City"
 			}
 		}
+	},
+	"uischema": {
+	  "ui:order": ["location", "state", "nordicCountry", "country", "region", "city"],
+	  "location": {
+	    "ui:widget": "radio",
+	    "ui:options": {
+		"inline": true
+	    },
+	    "classNames": "col-xs-12"
+	  },
+	  "state": {
+	    "condition": "location=us",
+	    "classNames": "col-xs-6"
+	  },
+	  "nordicCountry": {
+	    "condition": "location=nordic",
+	    "ui:widget": "radio",
+	    "classNames": "col-xs-6"
+	  },
+	  "country": {
+	    "condition": "location=other",
+	    "classNames": "col-xs-6"
+	  },
+	  "city": {
+	    "condition": "location=us,nordic,other",
+	    "classNames": "col-xs-6"
+	  },
+	  "region": {
+	    "condition": "location=other||nordicCountry=fi,de,no,sv",
+	    "classNames": "col-xs-6"
+	  }
 	}
 }

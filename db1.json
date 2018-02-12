@@ -1,0 +1,81 @@
+{
+	"data":{"jsonschema": {
+		"title": "Map a DSP Seat",
+		"type": "object",
+		"properties": {
+			"DSP Partner": {
+				"type": "string",
+				"title": "DSP Partner",
+				"enum": ["appnexus"],
+				"enumNames": ["AppNexus"]
+			},
+			"description": {
+				"type": "string",
+				"title": "Description",
+			},
+			"markets": {
+				"type": "string",
+				"title": "Country",
+				"enum": ["market1", "market2", "market3", "market4", "market5"],
+				"enumNames": ["Market1", "Market2", "Market3", "Market4", "Market5"]
+			},
+      "agencies": {
+				"type": "string",
+				"title": "Agencies",
+				"enum": ["agency1", "agency2", "agency3", "agency4", "agency5"],
+				"enumNames": ["Agency1", "Agency2", "Agency3", "Agency4", "Agency5"]
+			},
+      "clients": {
+				"type": "string",
+				"title": "Clients",
+				"enum": ["client1", "client2", "client3", "client4", "client5"],
+				"enumNames": ["Client1", "Client2", "Client3", "Client4", "Client5"]
+			},
+      "advertisers": {
+				"type": "string",
+				"title": "Advertisers",
+				"enum": ["advertiser1", "advertiser2", "advertiser3", "advertiser4", "advertiser5"],
+				"enumNames": ["Advertiser1", "Advertiser2", "Advertiser3", "Advertiser4", "Advertiser5"]
+			},
+			"seatname": {
+				"type": "string",
+				"title": "Seat Name"
+			},
+			"seatid": {
+				"type": "string",
+				"title": "Seat Id"
+			},
+		}
+	},
+	"uischema": {
+	  "ui:order": ["DSP Partner", "description", "markets", "agencies", "clients", "advertisers", "seatname", "seatid"],
+	  "DSP Partner": {
+	    "ui:widget": "dspDropdown",
+	    "ui:options": {
+		    "inline": true
+	    },
+	    "classNames": "col-xs-12"
+	  },
+	  "state": {
+	    "condition": "location=us",
+	    "classNames": "col-xs-6"
+	  },
+	  "nordicCountry": {
+	    "condition": "location=nordic",
+	    "ui:widget": "radio",
+	    "classNames": "col-xs-6"
+	  },
+	  "country": {
+	    "condition": "location=other",
+	    "classNames": "col-xs-6"
+	  },
+	  "city": {
+	    "condition": "location=us,nordic,other",
+	    "classNames": "col-xs-6"
+	  },
+	  "region": {
+	    "condition": "location=other||nordicCountry=fi,de,no,sv",
+	    "classNames": "col-xs-6"
+	  }
+	}}
+}

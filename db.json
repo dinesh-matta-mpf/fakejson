@@ -1,5 +1,5 @@
 {
-	"jsonschema": {
+	"data":{"jsonschema": {
 		"title": "Location",
 		"type": "object",
 		"properties": {
@@ -65,5 +65,5 @@
 	    "condition": "location=other||nordicCountry=fi,de,no,sv",
 	    "classNames": "col-xs-6"
 	  }
-	}
+	}}
 }

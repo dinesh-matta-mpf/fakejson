@@ -51,6 +51,7 @@
 	  "ui:order": ["DSP Partner", "description", "markets", "agencies", "clients", "advertisers", "seatname", "seatid"],
 	  "DSP Partner": {
 	    "ui:widget": "dspDropdown",
+	    "ui:placeholder": "Select One",
             "type": "dropdown",
 	    "ui:options": {
 		    "inline": true
@@ -59,11 +60,13 @@
 	  },
 	  "description": {
             "ui:widget": "descriptionWidget",
+	    "ui:placeholder": "Description here...",
             "type": "textarea",
 	    "classNames": "col-xs-6"
 	  },
 	  "markets": {
 	    "ui:widget": "marketsDropdown",
+	    "ui:placeholder": "Select One or More Markets",
 	    "type": "dropdown",
 	    "classNames": "col-xs-6"
 	  },

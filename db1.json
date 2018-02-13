@@ -51,30 +51,45 @@
 	  "ui:order": ["DSP Partner", "description", "markets", "agencies", "clients", "advertisers", "seatname", "seatid"],
 	  "DSP Partner": {
 	    "ui:widget": "dspDropdown",
+            "type": "dropdown",
 	    "ui:options": {
 		    "inline": true
 	    },
 	    "classNames": "col-xs-12"
 	  },
-	  "state": {
-	    "condition": "location=us",
+	  "description": {
+            "ui:widget": "descriptionWidget",
+            "type": "textarea",
 	    "classNames": "col-xs-6"
 	  },
-	  "nordicCountry": {
-	    "condition": "location=nordic",
-	    "ui:widget": "radio",
+	  "markets": {
+	    "ui:widget": "marketsDropdown",
+	    "type": "dropdown",
 	    "classNames": "col-xs-6"
 	  },
-	  "country": {
-	    "condition": "location=other",
+	  "agencies": {
+	    "ui:widget": "agenciesDropdown",
+            "type": "dropdown",
 	    "classNames": "col-xs-6"
 	  },
-	  "city": {
-	    "condition": "location=us,nordic,other",
+	  "clients": {
+            "ui:widget": "clientsDropdown",
+            "type": "dropdown",
 	    "classNames": "col-xs-6"
 	  },
-	  "region": {
-	    "condition": "location=other||nordicCountry=fi,de,no,sv",
+	  "advertisers": {
+	    "ui:widget": "advertisersDropdown",
+            "type": "dropdown",
+	    "classNames": "col-xs-6"
+	  },
+	  "seatname": {
+	    "ui:widget": "seatWidget",
+            "type": "input",
+	    "classNames": "col-xs-6"
+	  },
+	  "seatid": {
+            "ui:widget": "seatidWidget",
+            "type": "input",
 	    "classNames": "col-xs-6"
 	  }
 	}}

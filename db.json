@@ -11,7 +11,7 @@
 			},
 			"description": {
 				"type": "string",
-				"title": "Description",
+				"title": "Description"
 			},
 			"markets": {
 				"type": "string",
@@ -44,7 +44,7 @@
 			"seatid": {
 				"type": "string",
 				"title": "Seat Id"
-			},
+			}
 		}
 	},
 	"uischema": {
